@@ -53,10 +53,13 @@ while True:
     if jurusan_pilihan is not None:
         mahasiswa = Mahasiswa(nama, nim, jurusan_pilihan.nama_jurusan)
         jurusan_pilihan.tambah_mahasiswa(mahasiswa)
-        print("Mahasiswa berhasil ditambahkan.")
+        print("Mahasiswa berhasil ditambahkan.")#supaya data dapat ditambahkan mahasiswa wajib membuat data sesuai dengan daftar jurusan 
+        #dan harus membuat data sesuai dengan bentuknya kapital apa tidak
     else:
         print("Jurusan tidak ditemukan.")
-    lanjutkan = input("Tambahkan mahasiswa lagi? (tambah/berhenti) ")
+    lanjutkan = input("Tambahkan mahasiswa lagi? (tambah/berhenti) ")#nantinya data akan ditampilkan ketika mahasiswa memilih berhenti
+    #data tersebut dapat diisi terus menerus lalu jika mahasiswa berhenti untuk menambahkan maka data dari daftar mahasiswa yang telah dimasukkan
+    #akan tampil daftar mahasiswa Teknik Informatika
     if lanjutkan.lower() != "tambah":
         break
 
