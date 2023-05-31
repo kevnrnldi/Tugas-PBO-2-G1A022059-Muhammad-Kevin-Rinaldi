@@ -42,7 +42,6 @@ universitas_xyz.tambah_jurusan(jurusan_tm)
 while True:
     nama = input("Masukkan nama mahasiswa: ")
     nim = input("Masukkan NIM mahasiswa: ")
-    print("Daftar Jurusan yang Tersedia:")
     universitas_xyz.tampilkan_daftar_jurusan()
     nama_jurusan_pilihan = input("Masukkan nama jurusan pilihan mahasiswa: ")
     jurusan_pilihan = None
