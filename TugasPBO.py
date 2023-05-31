@@ -1,4 +1,5 @@
 class Mahasiswa:
+   
     def __init__(self, nama, nim, jurusan):
         self.nama = nama  #Inisialisasi atribut nama dengan nilai parameter nama
         self.nim = nim  #Inisialisasi atribut nim dengan nilai parameter nim
@@ -32,10 +33,20 @@ class Universitas:
         for jurusan in self.daftar_jurusan:  #Melakukan iterasi untuk setiap objek jurusan dalam daftar_jurusan
             print(jurusan.nama_jurusan)  #Menampilkan nama jurusan
 
-universitas_xyz = Universitas("XYZ University")  #Membuat objek universitas_xyz dengan nama universitas "XYZ University"
-jurusan_ti = Jurusan("Teknik Informatika")  #Membuat jurusan dari universitas dengan nama jurusan "Teknik Informatika"
-universitas_xyz.tambah_jurusan(jurusan_ti)  #Menambahkan objek jurusan_ti ke dalam atribut daftar_jurusan objek universitas_xyz
-mahasiswa_nama = Mahasiswa("Muhammad Kevin Rinaldi", "G1A022059", jurusan_ti.nama_jurusan)  #Membuat data diri
-jurusan_ti.tambah_mahasiswa(mahasiswa_nama)
-universitas_xyz.tampilkan_daftar_jurusan()
-jurusan_ti.tampilkan_daftar_mahasiswa()
+while True:
+    universitas_xyz = Universitas("XYZ University") #Membuat objek universitas_xyz dengan nama universitas "XYZ University"kevi
+    jurusan_ti = Jurusan("-Teknik Informatika")#Membuat jurusan dari universitas dengan nama jurusan "Teknik Informatika"
+    jurusan_te = Jurusan ("-Teknik Elektro")#membuat data dari jurusan lain
+    jurusan_tm = Jurusan("-Teknik Mesin")
+    universitas_xyz.tambah_jurusan(jurusan_ti)#Menambahkan objek jurusan_ti ke dalam atribut daftar_jurusan objek universitas_xyz
+    universitas_xyz.tambah_jurusan(jurusan_te)
+    universitas_xyz.tambah_jurusan(jurusan_tm)
+    nama = input("Masukkan nama mahasiswa: ")
+    nim = input("Masukkan NIM mahasiswa: ")
+    mahasiswa_nama = Mahasiswa(nama, nim, jurusan_ti.nama_jurusan)#Membuat data diri
+    jurusan_ti.tambah_mahasiswa(mahasiswa_nama)
+    universitas_xyz.tampilkan_daftar_jurusan()
+    jurusan_ti.tampilkan_daftar_mahasiswa()
+    lanjutkan = input("Tambahkan mahasiswa lagi? (lanjut/berhenti) ")
+    if lanjutkan.lower() != "lanjut":
+        break
